@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body bgcolor="cyan">
+  {% load  staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        my site
+    </title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #753;
+}
+
+li {
+    float:right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+</head>
+<body>
+
+<center><h1>cart items</h1>
+<table border="1">
+<tr ><th>id</th>
+  <th>pid</th>
+  <th>qty</th>
+  <th>unitprice</th>
+  <th>tuprice</th>
+</tr>
+{% for ct in k %}
+<tr>
+<td>{{ ct.id }}</td>
+  <td>{{ ct.pid }}</td>
+  <td>{{ ct.units}}</td>
+  <td>{{ ct.unitprice }}</td>
+  <td>{{ ct.tuprice }}</td>
+   <td><a href="http://localhost:8000/deletecart?id={{ct.id}}">delete</a>
+</td>
+ <td><a href="http://localhost:8000/modifycart?id={{ct.id}}&pid={{ct.pid}}&oqt={{ct.units}}">modify qty</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+Total price:{{tp}}
+<a href="">checkout</a><br>
+<a href="http://localhost:8000">click here to add another product</a>
+</body>
+</html>
+
+
+ </body>
+</html>

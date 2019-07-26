@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <table border="1">
+<tr >
+  <th>pid</th>
+  <th>qty</th>
+  <th>price</th>
+</tr>
+{% for k,v in k.items %}
+<tr>
+  <td>{{ k }}</td>
+  <td>{{ v[0] }}</td>
+    <td>{{ v[1] }}</td>
+
+</tr>
+{% endfor %}
+</table>
+ </body>
+</html>

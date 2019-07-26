@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body bgcolor="cyan">
+  <table border="1">
+<tr >
+  <th>pid</th>
+  <th>pname</th>
+  <th>pcost</th>
+    <th>pmfdt</th>
+    <th>pexpdt</th>
+</tr>
+{% for rec in records %}
+<tr>
+  <td>{{ rec.pid }}</td>
+  <td>{{ rec.pname }}</td>
+  <td>{{ rec.pcost }}</td>
+  <td>{{ rec.pmfdt }}</td>
+  <td>{{ rec.pexpdt }}</td>
+</tr>
+{% endfor %}
+</table>
+ </body>
+</html>

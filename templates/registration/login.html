@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+ </body>
+</html>
